@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <style>
+      button {
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick=" myNumber = rock ; check();">Rock</button>
+    <button onclick=" myNumber = paper; check();">Paper</button>
+    <button onclick=" myNumber = scissor; check();">Scissor</button>
+
+    <!--  -->
+    <script>
+      let myNumber = "";
+      let rock = 1;
+      let paper = 2;
+      let scissor = 3;
+
+      function check() {
+        let computer = Math.floor(Math.random() * 3) + 1;
+
+        if (myNumber == computer) {
+          window.alert("It is a Tie! Both have chosen the same!");
+        } else if (computer == rock && myNumber == paper) {
+          window.alert("You have won! You chose paper and Computer chose rock");
+        } else if (computer == paper && myNumber == rock) {
+          window.alert(
+            "Computer have won! You chose rock but Computer chose paper"
+          );
+        } else if (computer == paper && myNumber == scissor) {
+          window.alert(
+            "You have won! You chose scissor and Computer chose paper"
+          );
+        } else if (computer == scissor && myNumber == paper) {
+          window.alert(
+            "Computer have won! You chose paper but Computer chose scissor"
+          );
+        } else if (computer == scissor && myNumber == rock) {
+          window.alert(
+            "You have won! You chose rock and Computer chose scissor"
+          );
+        } else if (computer == rock && myNumber == scissor) {
+          window.alert(
+            "Computer have won! You chose scissor but Computer chose rock"
+          );
+        }
+      }
+    </script>
+  </body>
+</html>
